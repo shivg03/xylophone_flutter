@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -11,12 +12,16 @@ class xylophoneApp extends StatelessWidget {
 
   Expanded builtKey({required Color color, required int soundNumber}) {
     return Expanded(
-      child: TextButton(
-        style: TextButton.styleFrom(backgroundColor: color),
-        onPressed: () {
-          playSound(soundNumber);
-        },
-        child: Text(''),
+      child: Container(
+        height: 50,
+        width: 350,
+        color: color,
+        child: TextButton(
+          onPressed: () {
+            playSound(soundNumber);
+          },
+          child: Text(''),
+        ),
       ),
     );
   }
